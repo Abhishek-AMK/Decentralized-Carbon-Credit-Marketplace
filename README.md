@@ -20,6 +20,47 @@ A next-generation, decentralized carbon credit marketplace that connects capital
 
 ***
 
+## Getting Started (MVP)
+
+This project uses a **Python-first stack** managed by **Poetry**.
+
+### Prerequisites
+- Python 3.11+
+- Node.js & NPM (for local blockchain)
+- [Poetry](https://python-poetry.org/)
+
+### Installation
+```bash
+# Install Python dependencies
+poetry install
+
+# Install Node dependencies (Hardhat)
+npm install
+```
+
+### Running the Application
+
+**1. Start Local Blockchain** (Terminal 1)
+```bash
+npx hardhat node
+```
+*Keep this running.*
+
+**2. Deploy Contracts** (Terminal 2)
+```bash
+poetry run python marketplace_app/deploy_web3.py
+```
+*This deploys contracts to the local node and mints initial carbon credit tokens.*
+
+**3. Run Frontend** (Terminal 2 or 3)
+```bash
+cd marketplace_app
+poetry run reflex run
+```
+Access the app at [http://localhost:3000](http://localhost:3000).
+
+***
+
 ## Overview
 
 This project is a decentralized carbon credit marketplace that channels funding into verified climate-positive projects such as reforestation, renewable energy, and carbon capture. It aims to solve fragmentation, low trust, and poor UX in existing markets by combining open-source infrastructure, a robust trust layer, and a user-centric interface.[3][4][5]
