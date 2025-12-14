@@ -1,0 +1,11 @@
+name: carbon-credit-marketplace
+plugins:
+  - name: solidity
+
+dependencies:
+  - name: OpenZeppelin
+    github: OpenZeppelin/openzeppelin-contracts
+    version: 4.9.3
+
+solidity:
+  version: "0.8.20"

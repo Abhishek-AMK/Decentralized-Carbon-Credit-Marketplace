@@ -1,0 +1,24 @@
+{
+  "name": "decentralized-carbon-credit-marketplace",
+  "version": "1.0.0",
+  "description": "A next-generation, decentralized carbon credit marketplace that connects capital with verifiably climate-positive projects through a transparent, open-source, and impact-first platform.[1][2]",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abhishek-AMK/Decentralized-Carbon-Credit-Marketplace.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Abhishek-AMK/Decentralized-Carbon-Credit-Marketplace/issues"
+  },
+  "homepage": "https://github.com/Abhishek-AMK/Decentralized-Carbon-Credit-Marketplace#readme",
+  "devDependencies": {
+    "hardhat": "^3.1.0"
+  }
+}
