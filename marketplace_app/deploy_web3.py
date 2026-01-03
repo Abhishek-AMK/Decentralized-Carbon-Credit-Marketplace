@@ -77,6 +77,7 @@ def deploy():
 
     send_tx(cc_contract.functions.mint(account.address, 1, 1000, b""))
     send_tx(cc_contract.functions.mint(account.address, 2, 500, b""))
+    send_tx(cc_contract.functions.mint(account.address, 3, 200, b""))
 
     # Approve Marketplace
     print("Approving marketplace...")
@@ -88,6 +89,7 @@ def deploy():
     price = w3.to_wei(0.01, 'ether')
     send_tx(mp_contract.functions.listToken(cc_address, 1, 100, price))
     send_tx(mp_contract.functions.listToken(cc_address, 2, 50, price))
+    send_tx(mp_contract.functions.listToken(cc_address, 3, 25, price))
 
     print("Setup Complete.")
     print(f"CC_ADDRESS = '{cc_address}'")

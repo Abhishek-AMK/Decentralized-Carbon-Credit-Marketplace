@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+.env
+.pytest_cache/
+.mypy_cache/
+.reflex/
+.web/
+.states/
+
+# Node
+node_modules/
+dist/
+.next/
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+._*
+Desktop.ini
+
+# Project Specific
+recordings/
+# screenshots/ # I'll actually keep screenshots for the submission, but usually they'd be ignored. 
+# User asked for screenshots and video in the zip, so maybe keep them in repo for now? 
+# Usually, we don't commit large binaries like videos, but this is a hackathon repo.

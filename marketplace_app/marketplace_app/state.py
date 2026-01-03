@@ -10,9 +10,14 @@ class Listing(rx.Base):
     token_contract: str
     token_id: int
     amount: int
-    price: str  # Display string (ETH)
-    price_wei: int # For tx
+    price: str
+    price_wei: int
     active: bool
+    # Domain fields for PS3
+    category: str = "Renewable"
+    location: str = "Global"
+    is_verra: bool = True
+    sdgs: list[int] = [13]
 
 class State(rx.State):
     listings: list[Listing] = []
@@ -29,20 +34,32 @@ class State(rx.State):
             print(f"Error fetching listings: {e}")
             total = 0
             
+        project_data = {
+            1: {"cat": "Forestry", "loc": "Amazon, Brazil", "verra": True, "sdgs": [13, 15]},
+            2: {"cat": "Wind Power", "loc": "Gujarat, India", "verra": True, "sdgs": [7, 13]},
+            3: {"cat": "Solar Energy", "loc": "Mojave, USA", "verra": False, "sdgs": [7, 9, 13]},
+        }
+            
         new_listings = []
         for i in range(total):
             try:
                 raw = mp.functions.listings(i).call()
-                # struct Listing: listingId, seller, tokenContract, tokenId, amount, price, active
+                token_id = raw[3]
+                p_info = project_data.get(token_id, {"cat": "Renewable", "loc": "International", "verra": True, "sdgs": [13]})
+                
                 l = Listing(
                     listing_id=raw[0],
                     seller=raw[1],
                     token_contract=raw[2],
-                    token_id=raw[3],
+                    token_id=token_id,
                     amount=raw[4],
                     price=f"{Web3.from_wei(raw[5], 'ether')} ETH",
                     price_wei=raw[5],
-                    active=raw[6]
+                    active=raw[6],
+                    category=p_info["cat"],
+                    location=p_info["loc"],
+                    is_verra=p_info["verra"],
+                    sdgs=p_info["sdgs"]
                 )
                 if l.active and l.amount > 0:
                     new_listings.append(l)

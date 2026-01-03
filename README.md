@@ -22,19 +22,36 @@ A next-generation, decentralized carbon credit marketplace that connects capital
 
 ## Getting Started (MVP)
 
-This project uses a **Python-first stack** managed by **Poetry**.
+This project uses a **Python-first stack** managed by **Poetry**. 
+
+> [!IMPORTANT]
+> Since the project is hosted on an external drive, specific configuration is required to handle filesystem metadata and macOS-specific restrictions.
 
 ### Prerequisites
 - Python 3.11+
 - Node.js & NPM (for local blockchain)
-- [Poetry](https://python-poetry.org/)
+- [Poetry](https://python-poetry.org/) (version 2.0+)
+
+### Initial Setup
+
+Before installing dependencies, configure Poetry to use local virtual environments to bypass macOS system restrictions:
+
+```bash
+# Configure Poetry for local virtualenvs
+poetry config virtualenvs.create true --local
+poetry config virtualenvs.in-project true --local
+```
 
 ### Installation
+
 ```bash
-# Install Python dependencies
+# 1. Clean up corrupt macOS metadata (Critical for external drives)
+find . -name "._*" -delete
+
+# 2. Install Python dependencies
 poetry install
 
-# Install Node dependencies (Hardhat)
+# 3. Install Node dependencies (Hardhat)
 npm install
 ```
 
@@ -48,6 +65,7 @@ npx hardhat node
 
 **2. Deploy Contracts** (Terminal 2)
 ```bash
+# Run from the project root
 poetry run python marketplace_app/deploy_web3.py
 ```
 *This deploys contracts to the local node and mints initial carbon credit tokens.*
@@ -55,9 +73,18 @@ poetry run python marketplace_app/deploy_web3.py
 **3. Run Frontend** (Terminal 2 or 3)
 ```bash
 cd marketplace_app
+# Clean metadata again to prevent Reflex crashes
+find . -name "._*" -delete
 poetry run reflex run
 ```
-Access the app at [http://localhost:3000](http://localhost:3000).
+Access the app at [http://localhost:3000](http://localhost:3000) (or 3001 if 3000 is occupied).
+
+### Troubleshooting
+
+If you encounter `FileNotFoundError` or `UnicodeDecodeError` during `reflex run` or `poetry install`:
+- **Run the cleanup command**: `find . -name "._*" -delete`
+- **Check virtualenv**: Ensure `.venv` exists in the project root.
+- **Restart Reflex**: Sometimes a second start is needed if ports were shifted.
 
 ***
 
