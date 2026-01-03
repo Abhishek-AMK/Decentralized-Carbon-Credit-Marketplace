@@ -34,13 +34,15 @@ This project delivers a high-performance, decentralized marketplace for carbon c
 
 ## 🌍 Deployed Prototype & References
 
-For the Round 1 MVP, this is a **Local Decentralized Application (dApp)**. The prototype is provided via:
+For the Final Round, this project is delivered as a **High-Performance Local Decentralized Application (dApp)**. This ensures that judges can verify the full on-chain logic (Minting, Trading, State Updates) without encountering gas-fee blockers or external network latency.
 
+### Primary References:
 1.  **GitHub Repository**: [https://github.com/Abhishek-AMK/Decentralized-Carbon-Credit-Marketplace](https://github.com/Abhishek-AMK/Decentralized-Carbon-Credit-Marketplace)
-2.  **MVP Setup**: The application is architected to run in an isolated environment (Hardhat + Reflex) to ensure full functionality (Token Minting, Listing, and Purchase) can be verified by the judges without gas-fee constraints.
+2.  **Full Logic Verification**: Smart contracts are optimized for local evaluation via Hardhat.
+3.  **Demo Video**: A 1-minute cinematic walkthrough showing all features in high resolution.
 
-> [!NOTE]
-> Since this is a Core Blockchain solution, the "Deployed Prototype" link refers to the **Open Source Repository** and **Technical Walkthrough** provided in the submission ZIP.
+> [!TIP]
+> This delivery method allows for a 100% stable evaluation of the "Cinematic Clarity" UI and complex blockchain interactions.
 
 ---
 

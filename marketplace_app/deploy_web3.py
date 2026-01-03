@@ -4,9 +4,9 @@ import os
 from web3 import Web3
 from eth_account import Account
 
-# Credentials from Env
-PRIV_KEY = os.getenv("PRIVATE_KEY", "0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80")
-RPC_URL = os.getenv("RPC_URL", "http://127.0.0.1:8545")
+# Hardhat Account #0
+PRIV_KEY = "0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80"
+RPC_URL = "http://127.0.0.1:8545"
 
 def deploy():
     w3 = Web3(Web3.HTTPProvider(RPC_URL))
