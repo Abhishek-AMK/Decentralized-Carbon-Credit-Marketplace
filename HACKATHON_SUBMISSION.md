@@ -3,11 +3,11 @@
 
 **Theme**: Online Marketplace for Carbon Credits  
 **Author**: Abhishek Kulkarni  
-**GitHub Repository**: [Your Repo Link Here]  
+**GitHub Repository**: [https://github.com/Abhishek-AMK/Decentralized-Carbon-Credit-Marketplace](https://github.com/Abhishek-AMK/Decentralized-Carbon-Credit-Marketplace)  
 
 ---
 
-## 🏆 Alignment with Problem Statement 3
+## Alignment with Problem Statement 3
 This project delivers a high-performance, decentralized marketplace for carbon credits, explicitly meeting all "must-have" requirements of the PS3 prompt:
 
 *   **Pricing**: Real-time ETH/Wei pricing displayed with 0.01 ETH decimals for precision.
