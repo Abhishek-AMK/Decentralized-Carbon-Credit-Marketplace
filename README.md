@@ -215,24 +215,3 @@ Contributions are welcome once the core architecture is in place. Contribution g
 ## License
 
 This project will be released under an open-source license compatible with public blockchain and climate-finance ecosystems (exact license TBA in `LICENSE`).[2][11]
-
-[1](https://github.com/jehna/readme-best-practices)
-[2](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes)
-[3](https://www.osiztechnologies.com/carbon-credits-nft-marketplace-development)
-[4](https://www.antiersolutions.com/carbon-credits-development/)
-[5](https://www.causeartist.com/carbon-credit-platforms/)
-[6](https://github.com/masaun/tokenized-carbon-credit-marketplace)
-[7](https://www.carbonmark.com)
-[8](https://github.com/undp/undp-national-carbon-registry)
-[9](https://toucan.earth)
-[10](https://www.hatica.io/blog/best-practices-for-github-readme/)
-[11](https://docs.github.com/en/repositories/creating-and-managing-repositories/best-practices-for-repositories)
-[12](https://www.dhiwise.com/post/how-to-write-a-readme-that-stands-out-in-best-practices)
-[13](https://www.sciencedirect.com/science/article/pii/S2211467X24001731)
-[14](https://tilburgsciencehub.com/topics/collaborate-share/share-your-work/content-creation/readme-best-practices/)
-[15](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/)
-[16](https://www.reddit.com/r/github/comments/136ks63/10_mustknow_tips_for_crafting_the_perfect/)
-[17](https://github.com/banesullivan/README)
-[18](https://www.youtube.com/watch?v=E6NO0rgFub4)
-[19](https://www.klimadao.finance)
-[20](https://ctxglobal.com)
